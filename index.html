@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Predict Weather</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="CSS/weather.css" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div class="centerDiv">
+            <div class="weatherDiv">
+                <input type="text" class="places" Placeholder="Enter Your Place" value="">
+                <div class="suggestions">
+                    <ul>
+                        <li>Sample</li>
+                    </ul>
+                </div>
+                <p class="search-icon"><i class="fas fa-search" onclick="showTemp()"></i></p>
+
+                <div>
+                    <img src="cloud.jpg" alt="cloud" class="cloudTemp">
+                    <h3 class="placesTemp"></h3>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/places.js"></script>
+        <script src="js/placesLatLong.js"></script>
+        <script src="js/autocomplete.js"></script>
+        
+    </body>
+</html>

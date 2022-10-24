@@ -1,0 +1,80 @@
+body{
+    padding: 0;
+    margin: 0; 
+    background: lightskyblue;
+}
+
+.weatherDiv{
+    width: 350px;
+    height: 200px;
+    margin-left: 38%;
+    margin-top: 5%;
+    border-radius: 8px;
+    /* background: white;  */
+    padding: 2px 0;  
+    position: relative;
+}
+.suggestions{/* 
+    height: 280px; */
+    padding: 5px;
+    overflow-y: auto;
+    background: white;
+    display: none;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+.suggestions li{
+    padding: 4px;
+    list-style: none;
+    cursor: auto;
+    width: 97%;
+    border-radius: 3px;   
+}
+.suggestions li:hover{
+    background: #efefef;    
+}
+.places{
+    width: 95%;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    border:none;
+    background: white;
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+    box-shadow: 1px 5px 8px gray;
+}
+.fa-search{
+    position: absolute;
+    top: 6%;
+    right: 3%;
+    color: #644fff;
+    cursor: pointer;
+}
+.weatherDiv.active .suggestions{
+    display: block;
+}
+.cloudTemp{
+    width: 350px;
+    height: 200px;
+    border-radius: 8px;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cloudTemp.active{
+    display: block;
+}
+.placesTemp{
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    display: none;
+}
+.placesTemp.active{
+    display: block;
+}
+
