@@ -104,7 +104,7 @@ function showTemp(){
             console.log(data);
             let cityName = emptyArray;
             let temp = data.list[0].temp.day;
-            x.innerText = `Temperature of ${cityName} is \n ${temp} °C` 
+            x.innerText = `Temperature of ${cityName} is \n ${temp} \u00B0C` 
         })
         .catch((err) => {
             console.log(err)
