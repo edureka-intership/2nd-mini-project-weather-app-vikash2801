@@ -104,7 +104,32 @@ function showTemp(){
             console.log(data);
             let cityName = emptyArray;
             let temp = data.list[0].temp.day;
-            x.innerText = `Temperature of ${cityName} is \n ${temp} \u00B0C` 
+
+            //temperatureText
+            let tempText = document.getElementsByClassName('temperatureText')[0]
+            tempText.innerText = `Temperature of ${cityName} is \n ${temp} \u00B0C`
+            
+            //weatherIcon
+            let icon = document.getElementsByClassName('weatherIcon')[0];
+            let w_Icon = data.list[0].weather[0].icon;
+            let iconURL = `https://openweathermap.org/img/wn/${w_Icon}.png`;
+
+            icon.src = iconURL;
+
+            //weatherText
+            let text1 = document.getElementsByClassName('weatherText')[0];
+            let w_Description = data.list[0].weather[0].description;
+            text1.innerText = w_Description;
+
+            //humidityText
+            let text2 = document.getElementsByClassName('humidityText')[0];
+            let humidity = data.list[0].humidity;
+            text2.innerText = `Humidity: ${humidity}%`;
+
+            //windText
+            let text3 = document.getElementsByClassName('windText')[0];
+            let windSpeed = data.list[0].speed;
+            text3.innerText = `Wind Speed: ${windSpeed} kmph`;
         })
         .catch((err) => {
             console.log(err)
